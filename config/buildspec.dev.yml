@@ -1,0 +1,20 @@
+version: 0.1
+
+phases:
+  install:
+    runtime-version:
+      nodejs: 14.15.0
+    commands:
+      - echo Installing dependencies
+      - yarn
+      - echo Installation done
+
+  build:
+    commands:
+      - echo Testing service
+      - yarn test
+      - echo Test done
+
+cache:
+  paths:
+    - 'node_modules/**/*'
